@@ -28,7 +28,6 @@ body .upper-div .suggestion-box {
   position: absolute;
   z-index: 100;
   max-height: 100px;
-  padding: 10px;
   cursor: pointer;
   overflow-y: scroll;
 }
@@ -38,12 +37,15 @@ body .upper-div .suggestion-box::-webkit-scrollbar {
 body .upper-div .suggestion-box .suggestion {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  padding: 5px;
 }
 body .upper-div .suggestion-box .suggestion .suggestion-img {
   width: 20px;
   height: 20px;
   border: 1px solid black;
+}
+body .upper-div .suggestion-box .suggestion:hover {
+  background-color: grey;
 }
 body .card-container {
   margin-top: 20px;

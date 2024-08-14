@@ -41,7 +41,6 @@ body {
       position: absolute;
       z-index: 100;
       max-height: 100px;
-      padding: 10px;
       cursor: pointer;
       overflow-y: scroll;
       &::-webkit-scrollbar {
@@ -50,11 +49,14 @@ body {
       .suggestion{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 5px;
+        padding: 5px;
         .suggestion-img {
             width: 20px;
             height: 20px;
             border: 1px solid $black-color;
+          }
+          &:hover{
+            background-color: $border-color;
           }
       }
     }
