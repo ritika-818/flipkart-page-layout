@@ -1,0 +1,197 @@
+$primary-color: #2874F0;
+$background-color: #F1F3F6;
+$text-color: white;
+$border-color: grey;
+$suggestion-color: rgb(188, 188, 188);
+$black-color: black;
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: $background-color;
+  padding: 0;
+  margin: 0;
+
+  .upper-div {
+    padding: 10px;
+    @include flex-center(row, space-between);
+    background-color: $primary-color;
+    color: $text-color;
+    height: auto;
+
+    .logo {
+      height: 25px;
+    }
+
+    .input {
+      width: 700px;
+      height: 30px;
+    }
+
+    .suggestion-box {
+      width: 690px; 
+      background-color: $suggestion-color;
+      color: $black-color;
+      position: absolute;
+      z-index: 100;
+      max-height: 100px;
+      padding: 10px;
+      cursor: pointer;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .suggestion{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        .suggestion-img {
+            width: 20px;
+            height: 20px;
+            border: 1px solid $black-color;
+          }
+      }
+    }
+  }
+
+  .card-container {
+    margin-top: 20px;
+    @include flex-center(column, flex-start);
+    gap: 30px;
+    position: relative;
+
+    .card-div {
+      @include flex-center(row, flex-start);
+      align-items: center;
+
+      .id {
+        margin-right: 10px;
+        font-weight: 600;
+        font-size: medium;
+      }
+
+      .image {
+        width: 180px;
+        height: 180px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .text-div {
+        margin-left: 10px;
+        @include flex-center(column, flex-start);
+        width: 600px;
+        gap: 10px;
+
+        .title {
+          font-weight: 600;
+          font-size: medium;
+        }
+      }
+    }
+
+    .inner-div {
+      padding: 15px;
+      @include flex-center(row, space-between);
+      overflow: hidden;
+      height: 190px;
+      border: 1px solid $border-color;
+      background-color: $text-color;
+
+      .price {
+        font-weight: 600;
+        font-size: medium;
+        padding-top: 0px;
+        padding-right: 40px;
+
+        .oldPrice {
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 875px) {
+    .upper-div {
+      @include flex-center(column, center);
+      height: auto;
+
+      .input {
+        width: 300px;
+        margin-top: 10px;
+      }
+
+      .suggestion-box {
+        width: 285px; 
+      }
+    }
+
+    .card-container {
+      .card-div {
+        .image {
+          width: 150px;
+          height: 150px;
+        }
+
+        .text-div {
+          width: 100%;
+        }
+      }
+
+      .inner-div {
+        flex-direction: column;
+        height: auto;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .upper-div {
+      @include flex-center(column, center);
+      height: auto;
+
+      .input {
+        width: 300px;
+        margin-top: 10px;
+      }
+
+      .suggestion-box {
+        width: 285px; 
+      }
+    }
+
+    .card-container {
+      .card-div {
+        flex-direction: column;
+        align-items: center;
+
+        .image {
+          width: 120px;
+          height: 120px;
+        }
+
+        .text-div {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .inner-div {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+body {
+  font-family: sans-serif;
+  background-color: #F1F3F6;
+  padding: 0;
+  margin: 0;
+}
+body .upper-div {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2874F0;
+  color: white;
+  height: auto;
+}
+body .upper-div .logo {
+  height: 25px;
+}
+body .upper-div .input {
+  width: 700px;
+  height: 30px;
+}
+body .upper-div .suggestion-box {
+  width: 690px;
+  background-color: rgb(188, 188, 188);
+  color: black;
+  position: absolute;
+  z-index: 100;
+  max-height: 100px;
+  padding: 10px;
+  cursor: pointer;
+  overflow-y: scroll;
+}
+body .upper-div .suggestion-box::-webkit-scrollbar {
+  display: none;
+}
+body .upper-div .suggestion-box .suggestion {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+body .upper-div .suggestion-box .suggestion .suggestion-img {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+body .card-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+body .card-container .card-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: center;
+}
+body .card-container .card-div .id {
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: medium;
+}
+body .card-container .card-div .image {
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+body .card-container .card-div .image:hover {
+  transform: scale(1.1);
+}
+body .card-container .card-div .text-div {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 600px;
+  gap: 10px;
+}
+body .card-container .card-div .text-div .title {
+  font-weight: 600;
+  font-size: medium;
+}
+body .card-container .inner-div {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  height: 190px;
+  border: 1px solid grey;
+  background-color: white;
+}
+body .card-container .inner-div .price {
+  font-weight: 600;
+  font-size: medium;
+  padding-top: 0px;
+  padding-right: 40px;
+}
+body .card-container .inner-div .price .oldPrice {
+  text-decoration: line-through;
+}
+@media (max-width: 875px) {
+  body .upper-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  body .upper-div .input {
+    width: 300px;
+    margin-top: 10px;
+  }
+  body .upper-div .suggestion-box {
+    width: 285px;
+  }
+  body .card-container .card-div .image {
+    width: 150px;
+    height: 150px;
+  }
+  body .card-container .card-div .text-div {
+    width: 100%;
+  }
+  body .card-container .inner-div {
+    flex-direction: column;
+    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  body .upper-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  body .upper-div .input {
+    width: 300px;
+    margin-top: 10px;
+  }
+  body .upper-div .suggestion-box {
+    width: 285px;
+  }
+  body .card-container .card-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .card-container .card-div .image {
+    width: 120px;
+    height: 120px;
+  }
+  body .card-container .card-div .text-div {
+    width: 100%;
+    text-align: center;
+  }
+  body .card-container .inner-div {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */
